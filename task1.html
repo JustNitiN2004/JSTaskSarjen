@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <script>
+        var counter = 0
+        function increment() {
+            var ele = document.getElementById("task1");
+            if (counter >= 10) {
+            }
+            else {
+                counter += 1
+                ele.innerHTML = "<p>Count is " + counter + "</p>"
+            }
+        }
+        function decrement() {
+            var ele = document.getElementById("task1");
+            if (counter <= 0) {
+            }
+            else {
+                counter -= 1
+                ele.innerHTML = "<p>Count is " + counter + "</p>"
+            }
+        } 
+    </script>
+</head>
+
+<body>
+    <h1>Task 1</h1>
+    <button id="btn1" onclick="increment()">INC</button>
+    <button id="btn2" onclick="decrement()">DNC</button>
+    <p id="task1">Count is 0</p>
+</body>
+
+</html>

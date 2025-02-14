@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+    <script>
+        function one(){
+            console.log("one");
+            document.getElementById("input").value+="1"
+        }
+        function two(){
+            console.log("two");
+            document.getElementById("input").value+="2"
+        }
+        function three(){
+            console.log("three");
+            document.getElementById("input").value+="3"
+        }
+        function four(){
+            console.log("four");
+            document.getElementById("input").value+="4"
+        }
+        function five(){
+            console.log("five");
+            document.getElementById("input").value+="5"
+        }
+        function six(){
+            console.log("six");
+            document.getElementById("input").value+="6"
+        }
+        function seven(){
+            console.log("seven");
+            document.getElementById("input").value+="7"
+        }
+        function eight(){
+            console.log("eight");
+            document.getElementById("input").value+="8"
+        }
+        function nine(){
+            console.log("nine");
+            document.getElementById("input").value+="9"
+        }
+        function zero(){
+            console.log("zero");
+            document.getElementById("input").value+="0"
+        }
+
+
+        function sum(){
+            console.log("sum");
+            document.getElementById("input").value+="+"
+        }
+        function sub(){
+            console.log("sub");
+            document.getElementById("input").value+="-"
+        }
+        function mul(){
+            console.log("mul");
+            document.getElementById("input").value+="*"
+        }
+        function div(){
+            console.log("div");
+            document.getElementById("input").value+="/"
+        }
+
+
+        function ans(){
+            let expression=document.getElementById("input").value
+            let ans=eval(expression)
+            document.getElementById("input").value=ans
+            console.log(expression);
+            console.log(ans);
+            // document.getElementById("input").value+="+"
+        }
+
+        function reset(){
+            console.log("reset")
+            document.getElementById("input").value=""
+        }
+        function goBack(){
+            console.log("back");
+            document.getElementById("input").value=input.value.slice(0,-1)
+
+            // let input =document.getElementById("input")
+            // input.value=input.value.slice(0,-1)
+
+            
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <h1>Task 10</h1>
+    <input type="text" id="input"><br><br>  
+    <button onclick="one()">1</button>
+    <button onclick="two()">2</button>
+    <button onclick="three()">3</button>
+    <button onclick="sum()">+</button>
+    
+    <br><br>
+
+    <button onclick="four()">4</button>
+    <button onclick="five()">5</button>
+    <button onclick="six()">6</button>
+    <button onclick="sub()">-</button>
+    
+    <br><br>
+
+    <button onclick="seven()">7</button>
+    <button onclick="eight()">8</button>
+    <button onclick="nine()">9</button>
+    <button onclick="mul()">*</button>
+    
+    <br><br>
+
+    <button onclick="zero()">0</button>
+    <button onclick="ans()">=</button>
+    <button onclick="reset()">c</button>
+    <button onclick="div()">/</button>
+    <button onclick="goBack()">x</button>
+     
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task6</title>
+    <script>
+        function getText(){
+            console.clear()
+           r= document.getElementById("r").value
+           g= document.getElementById("g").value
+           b= document.getElementById("b").value
+            console.log(r);
+            console.log(g);
+            console.log(b);
+
+            // document.getElementById("task6").innerHTML = r + ":" + g + ":" + b;
+            document.getElementById("task6").style.backgroundColor=`rgb(${r},${g},${b})`;
+
+
+
+            
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Task 6</h1>
+    <!-- <input type="text" name="" id="text"> -->
+    Red
+    <input type="range" min="0" max="255" name="" id="r" ><br>
+    Green
+    <input type="range" min="0" max="255"  name="" id="g"><br>
+    Blue
+    <input type="range" min="0" max="255"  name="" id="b"><br><br>
+    <button onclick="getText()">Get Color</button>
+    <p id="task6" style="width: 300px;height:300px; "> </p>
+</body>
+</html>

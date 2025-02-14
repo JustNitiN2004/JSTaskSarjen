@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11</title>
+    <script>
+        function getData(){
+            let amount=parseInt(document.getElementById("amount").value)
+            let rate=parseInt(document.getElementById("rate").value)
+            
+
+            let gstAmount=(amount*rate)/100
+            console.log(gstAmount);
+
+            document.getElementById("task11").innerHTML=`
+                Amount:${amount}<br>
+                GST Rate:${rate}<br>
+                GST Amount:${gstAmount}<br>
+                Final Amount:${amount+gstAmount}
+            `
+            
+            
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Task 11</h1>
+    <h3>GST calculator</h3>
+    Enter amount:
+    <input type="text" id="amount"><br><br>
+    Select GST rate:
+    <Select id="rate">
+        
+        <option name="rate">0</option>
+        <option name="rate">5</option>
+        <option name="rate">12</option>
+        <option name="rate">18</option>
+        <option name="rate">28</option>
+
+    </Select><br><br>
+    <button onclick="getData()">
+        Calculate GST
+    </button>
+    <p id="task11">
+
+    </p>
+</body>
+
+</html>

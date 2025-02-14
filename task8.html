@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <script>
+        let r=Math.random()*10
+        let key=Math.round(r)
+        console.log(key);
+        
+
+        function checkVal(){
+            let temp=document.getElementById("value").value
+            let input=parseInt(temp)
+             
+            
+            if(input===key){
+                document.getElementById("task8").innerHTML+="Success Value<br>"
+                console.log("Samrt Boy");
+                
+            }
+            else{
+                document.getElementById("task8").innerHTML+="Failure Value<br>"
+                console.log("Kal aana");
+                
+            }
+            document.getElementById("value").value=""
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Task 8</h1>
+    <p>Gauss the number betwwen 0 to 10</p>
+    <input type="text" id="value">
+    <button onclick="checkVal()">Gauss</button>
+    <p id="task8"></p>
+</body>
+</html>

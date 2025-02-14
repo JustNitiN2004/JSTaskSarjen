@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+
+    <script>
+
+
+
+
+        function getOtp() {
+            let otp = Math.round(Math.random() * 1000000)
+            document.getElementById("task3").innerHTML = otp
+        }
+
+    </script>
+</head>
+
+<body onload="getOtp()">
+    <h1>Task 3</h1>
+    <button onclick="getOtp()">Get Otp</button>
+    <p id="task3"></p>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+    <script>
+        function formSubmit() {
+            let name = document.getElementById("name").value
+            let number = document.getElementById("number").value
+
+            let gender = document.querySelector('input[name="gender"]:checked');
+            let genderValue = gender ? gender.value : "Not selected";
+
+            let hobbies=document.querySelectorAll('input[name="hobby"]:checked');
+            let hobbyValues=[]
+
+            hobbies.forEach((hobby)=>{
+                hobbyValues.push(hobby.value)
+            })
+            
+            // let hobby=document.getElementById("hobby").value
+            let city=document.getElementById("city").value
+
+            document.getElementById("task13").innerHTML=`
+                "Name":${name}<br>
+                "Number":${number}<br>
+                "Gender":${genderValue}<br>
+                "hobby":${hobbyValues}<br>
+                "City":${city}
+            `
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Task 13</h1>
+    <h3>Contact Form</h3>
+    <form>
+        Enter Name:
+        <input type="text" id="name" required><br><br>
+        Enter Mobile Number:
+        <input type="number" id="number" required><br><br>
+
+        Gender:
+        <input type="radio" name="gender" value="Male" required>Male
+        <input type="radio" name="gender" value="Female" required>Female <br><br>
+
+
+
+        Hobby:
+        <input type="checkbox" name="hobby" value="gaming">Gaming
+        <input type="checkbox" name="hobby" value="sports">Sports
+        <input type="checkbox" name="hobby" value="reading">Reading <br><br>
+        City:
+        <select id="city" required>
+
+            <option name="city"></option>
+            <option name="city">Navsari</option>
+            <option name="city">Surat</option>
+            <option name="city">Amreli</option>
+        </select><br><br>
+        <button type="reset">Reset</button>
+        <input type="button" name="submit" value="Submit" onclick="formSubmit()">
+
+    </Form>
+    <br>
+    <hr>
+    <h3> From details:</h3>
+    <p id="task13"></p>
+</body>
+
+</html>

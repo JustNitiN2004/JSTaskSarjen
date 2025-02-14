@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+    <script>
+
+
+        function time() {
+            const date = new Date()
+            let h = date.getHours()
+            let m = date.getMinutes()
+            let s = date.getSeconds()
+            m = checkTime(m)
+            s = checkTime(s)    
+            document.getElementById("task4").innerHTML = h + ":" + m + ":" + s;
+
+            setTimeout(time, 1000) 
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        
+        
+
+    </script>
+</head>
+
+<body onload="time()" >
+    <h1>Task 4</h1>
+    <p id="task4"></p>
+</body>
+
+</html>

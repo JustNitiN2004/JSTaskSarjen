@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <script>
+
+
+        function start() {
+            if (!timerRunning) {
+                timerInterval = setInterval(() => {
+                    elapsedTime++;
+                }, 1000); timerRunning = true;
+            }
+        } function pause() {
+            clearInterval(timerInterval); timerRunning = false;
+        }
+        function reset() { elapsedTime = 0; }
+
+        let counter=0
+        let interval
+        let isRunning=false
+        function startCtr(){
+              if(!isRunning){
+                timeInc=setInterval(()=>{
+                    counter++;
+
+                    if(counter<=10){
+
+                        document.getElementById("task2").innerHTML=counter
+                    }
+                },1000)
+                isRunning=true
+             
+                
+             
+             
+            }
+            
+        }
+        function pauseCtr(){
+            clearInterval(timeInc)
+            isRunning=false
+        }
+        function resetCtr(){
+            clearInterval(timeInc)
+            isRunning=false
+            counter=0
+            document.getElementById("task2").innerHTML="Start Countdown"
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Task 2</h1>
+    <button id="btn1" onclick="startCtr()">Start</button>
+    <button id="btn3" onclick="pauseCtr()">Pause</button>
+    <button id="btn2" onclick="resetCtr()">Reset</button>
+    <p id="task2">Start Countdown</p>
+</body>
+
+</html>

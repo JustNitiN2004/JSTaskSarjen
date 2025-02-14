@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+    <script>
+        let list = []
+        function getTask() {
+
+            let temp = document.getElementById("task").value
+            let i = list.length
+            list.push(temp)
+
+            document.getElementById("output").innerHTML += `<li id="task-${i}">
+                ${temp} 
+                <button onclick="editTask(${i})">Edit</button>
+                <button onclick="deleteTask(${i})">Delete</button>
+                </li>`
+
+            document.getElementById("task").value = ""
+             
+
+        }
+
+
+        function editTask(i) {
+            let newTask = prompt("Edit Task" + list[i])
+            list[i] = newTask
+            document.getElementById(`task-${i}`).innerHTML = `
+            ${newTask}
+            <button onclick="editTask(${i})">Edit</button>
+            <button onclick="deleteTask(${i})">Delete</button>`
+
+
+        }
+        function deleteTask(i) {
+            list.splice(i,1)
+            document.getElementById(`task-${i}`).remove()
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>List</h1>
+    <input type="text" id="task" value="">
+    <button onclick="getTask()">Add</button>
+    <ul id="output"></ul>
+</body>
+
+</html>
